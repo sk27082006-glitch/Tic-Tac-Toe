@@ -2,9 +2,11 @@
 
 A real-time multiplayer Tic-Tac-Toe web game built using HTML, CSS, JavaScript, and Firebase Firestore, allowing two players to play from different devices using a shared game link or code.
 
+
 **🌐 Live Demo:**
 
 👉 https://chimerical-dasik-bbebed.netlify.app/
+
 
 **✨ Features**
 
@@ -17,6 +19,7 @@ A real-time multiplayer Tic-Tac-Toe web game built using HTML, CSS, JavaScript, 
 📋 Copy Invite Link Button
 🔁 Restart Game Option
 
+
 **🛠️ Technologies Used**
 
 HTML5 – Structure
@@ -25,6 +28,7 @@ Vanilla JavaScript – Game Logic
 Firebase Firestore – Real-time database
 Firebase SDK v8.10.0
 Netlify – Deployment
+
 
 **📁 Project Structure**
 
@@ -35,6 +39,7 @@ tic-tac-toe-multiplayer/
 ├── index.js          # Game logic & Firebase sync
 ├── firebase-config.js# Firebase configuration
 └── README.md         # Project documentation
+
 
 **🎮 How to Play**
 
@@ -51,6 +56,7 @@ tic-tac-toe-multiplayer/
 -> Click "Join Game"
 -> Start playing!
 
+
 **📜 Game Rules**
 
 Player X always starts
@@ -58,6 +64,7 @@ Players take turns placing X or O
 First to align 3 symbols wins
 If all 9 cells fill with no winner → Draw
 Game automatically locks after completion
+
 
 **🔥 Firebase Setup (For Developers)**
 
@@ -78,6 +85,7 @@ service cloud.firestore {
 
 ⚠️ Note: These rules are for testing only.
 
+
 **🚀 Deployment**
 
 Netlify (Used)
@@ -85,11 +93,13 @@ Drag & drop project folder into Netlify
 Instant deployment
 Live URL generated automatically
 
+
 **🧪 Testing Instructions**
 
 Open the site in two different browsers / devices
 Create a game in one
 Join using the link/code in the other
+
 
 **Verify:**
 
@@ -97,22 +107,27 @@ Turn switching
 Real-time updates
 Win / Draw logic
 
+
 **🐛 Common Issues & Fixes**
+
 Issue	Solution
 Moves not working	Ensure correct turn logic
 Firestore error	Check rules & Firebase config
 Buttons disabled	Ensure isMyTurn logic updates before UI
+
 
 **🔒 Security Notes**
 
 Firestore rules currently allow public access
 Firebase keys are client-side (OK for demo)
 
+
 **For production:**
 
 Add Firebase Authentication
 Restrict Firestore rules
 Enable App Check
+
 
 **📈 Future Improvements**
 
@@ -123,6 +138,7 @@ Enable App Check
 🧑‍🤝‍🧑 Spectator mode
 🤖 AI opponent
 🌙 Dark mode
+
 
 **👩‍💻 Authors**
 
@@ -135,5 +151,6 @@ Built as a learning project to understand real-time multiplayer systems using Fi
 
 MIT License
 Free to use, modify, and distribute.
+
 
 🎉 Enjoy the game & happy coding!
