@@ -1,0 +1,204 @@
+/* Main Styles */
+#body1 {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title */
+#head1 {
+    color: #2c3e50;
+    font-weight: 800;
+    font-style: italic;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    font-size: 3.5em;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+/* Game Menu */
+#gameMenu {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 90%;
+}
+
+#createGameBtn, #joinGameBtn {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#createGameBtn:hover, #joinGameBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(45deg, #2980b9, #3498db);
+}
+
+#gameCodeInput {
+    padding: 15px;
+    font-size: 1.1em;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+#gameCodeInput:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Game Board */
+#gameBoard {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 90%;
+}
+
+#gameInfo {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* Game Board Buttons */
+.abc {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+    vertical-align: top;
+    font-size: 3em;
+    font-weight: bold;
+    color: #2c3e50;
+    background: linear-gradient(45deg, #ecf0f1, #bdc3c7);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.abc:hover:not(:disabled) {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(45deg, #bdc3c7, #ecf0f1);
+}
+
+.abc:active:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.abc:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+/* Copy Link Button */
+#copyLinkBtn {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+#copyLinkBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
+}
+
+/* Restart Button */
+#restartBtn {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#restartBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Result Display */
+#result {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    min-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #head1 {
+        font-size: 2.5em;
+    }
+    
+    .abc {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5em;
+    }
+    
+    #gameCodeInput {
+        width: 200px;
+    }
+    
+    #result {
+        font-size: 1.5em;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    #head1 {
+        font-size: 2em;
+    }
+    
+    .abc {
+        width: 70px;
+        height: 70px;
+        font-size: 2em;
+        margin: 3px;
+    }
+    
+    #gameMenu, #gameBoard {
+        padding: 20px;
+        width: 95%;
+    }
+}

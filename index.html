@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Firebase SDK - Use version 8.10.0 (most stable) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body id="body1">
+    <h1 id="head1">TIC-TAC-TOE MULTIPLAYER</h1>
+    
+    <!-- Game Menu -->
+    <div id="gameMenu" style="text-align: center; margin: 30px;">
+        <button id="createGameBtn" style="padding: 15px 30px; font-size: 1.2em; margin: 10px;">
+            🎮 Create New Game
+        </button>
+        <p style="font-size: 1.2em; margin: 20px;">- OR -</p>
+        <div style="margin: 20px;">
+            <input type="text" id="gameCodeInput" placeholder="Enter Game Code" 
+                   style="padding: 12px; font-size: 1.1em; width: 200px;">
+            <button id="joinGameBtn" style="padding: 12px 20px; font-size: 1.1em; margin-left: 10px;">
+                🔗 Join Game
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Board (hidden initially) -->
+    <div id="gameBoard" style="display: none; text-align: center;">
+        <div id="gameInfo" style="margin: 20px; font-size: 1.3em; color: #333;">
+            <p id="playerStatus">You are: Player X</p>
+            <p id="turnStatus">Waiting for opponent...</p>
+            <p id="gameCodeDisplay">Game Code: <span id="gameCode"></span></p>
+            <button id="copyLinkBtn" style="padding: 10px 20px; margin: 10px;">📋 Copy Invite Link</button>
+        </div>
+        
+        <!-- Game Board -->
+        <button id='b1' class="abc"></button>
+        <button id='b2' class="abc"></button>
+        <button id='b3' class="abc"></button>
+        <br>
+        <button id='b4' class="abc"></button>
+        <button id='b5' class="abc"></button>
+        <button id='b6' class="abc"></button>
+        <br>
+        <button id='b7' class="abc"></button>
+        <button id='b8' class="abc"></button>
+        <button id='b9' class="abc"></button>
+        <br><br>
+        
+        <button id="restartBtn" style="padding: 12px 25px; font-size: 1.1em; margin: 10px; display: none;">
+            🔄 New Game
+        </button>
+    </div>
+
+    <!-- Game Result -->
+    <p id='result'></p>
+
+    <!-- Firebase Config -->
+    <script src="firebase-config.js"></script>
+    <!-- Game Logic -->
+    <script src="index.js"></script>
+</body>
+</html>
